@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+package proto;
+
+service TranslationService {
+  rpc GetTranslation(Request) returns (Response);
+}
+
+message Request {
+  string translationId = 1;
+}
+
+message Response {
+  string translatedText = 1;
+}
